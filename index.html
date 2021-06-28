@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Trispace:wght@500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles.css">
+        <title>Planet Facts</title>
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <h1>The Planets</h1>
+            <div id="planetContainer">
+                <!-- data-* is a html data attribute-->
+                <img data-modal-target="#modal" id="mercury" src="mercury.png" alt="mercury">
+                <img data-modal-target="#modal" id="venus" src="venus.png" alt="venus">
+                <img data-modal-target="#modal" id="earth" src="earth.png" alt="earth">
+                <img data-modal-target="#modal" id="mars" src="mars.png" alt="mars">
+                <img data-modal-target="#modal" id="jupiter" src="jupiter.png" alt="jupiter">
+                <img data-modal-target="#modal" id="saturn" src="saturn.png" alt="saturn">
+                <img data-modal-target="#modal" id="uranus" src="uranus.png" alt="uranus">
+                <img data-modal-target="#modal" id="neptune" src="neptune.png" alt="neptune">
+            </div>
+
+        </div>
+
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <div class="title">Planet Name</div>
+                <button data-close-button class="close">&times;</button>
+            </div>
+            <div class = "modal-image-box">
+                <img class="modal-image" src="realMercury.jpg" alt="planet image">
+            </div>
+            <div class="modal-body">There is no strife, no prejudice, no national conflict in outer space as yet.
+                 Its hazards are hostile to us all. Its conquest deserves the best of all mankind, and its 
+                 opportunity for peaceful cooperation many never come again. But why, some say, the moon? Why 
+                 choose this as our goal? And they may well ask why climb the highest mountain? Why, 35 years 
+                 ago, fly the Atlantic? Why does Rice play Texas?
+            </div>
+        </div>
+        <div id="overlay"></div>
+
+        <script src="script.js"></script>   
+    </body>
+</html>

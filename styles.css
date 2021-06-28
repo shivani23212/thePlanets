@@ -1,0 +1,148 @@
+body {
+    background-color: black;
+    background: url("spaceBg.jpg");
+    background-size: cover;
+}
+
+#wrapper {
+    overflow: auto; /* adds horizontal scrollbar */
+    white-space: nowrap; 
+}
+
+h1 {
+    font-family: 'Trispace', sans-serif;
+    position: absolute;
+    margin-left: 450px;
+    margin-top: 0px;
+    color: white;
+    font-size: 5em;   
+}
+
+#planetContainer {
+    position: absolute;
+    width: 95%;
+    height: 40%;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+  }
+
+img:not(.modal-image) {
+    max-width: 178px;
+    max-height: 178px;
+    width: auto;
+    height: auto;
+    padding: 4px;
+    transition: transform 1s;
+}
+
+img:hover:not(.modal-image) {
+    transform: scale(1.5);
+}
+
+#venus, #mars, #saturn, #neptune {
+    position: absolute;
+    top: 43%;
+}
+
+#earth, #jupiter, #uranus {
+    margin-left: 170px;
+}
+
+#jupiter {
+    max-width:none;
+    width: 210px;
+    height: 170px;
+}
+
+#saturn {
+    max-width:none;
+    width: 270px;
+    height: 150px;
+    margin-left: -40px;
+    top: 50%;
+}
+
+#uranus, #neptune {
+    width: 150px;
+    height: 150px;
+}
+
+#neptune {
+    margin-left: 30px;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); /* scale property hides modal*/
+    transition: 500ms ease-in-out;
+    border: 1px solid pink;
+    color: white;
+    font-size: 17px;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: orange;
+    width: 400px;
+    max-width: 80%;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex; /* easier to line up title and x button*/
+    justify-content: space-between;
+    align-items: center; /* vertically center*/
+    border-bottom: 3px solid white;
+}
+
+.modal-header .title {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.modal-header .close { /* button */
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+/* .modal-image-box {
+    width: 400px;
+    height: 320px;
+} */
+
+.modal-image {
+    width:350px;
+    height:auto;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 10%;
+}
+
+.modal-body {
+    padding: 10px 15px;
+    text-align: center;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0; 
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none; /* allows all parts of page to be clicked */
+    transition: 500ms ease-in-out;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all; /* disable all click events behind overlay*/
+}
+
